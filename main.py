@@ -32,7 +32,7 @@ if conf["token"] != None:
                 if result.json()["code"] == 200:
                     print(category + " " + share_name + " 添加完成")
                 else:
-                    print(f"\033[1;31m{category}{share_name} 添加失败, 请检查是否重复添加!\033[0m")
+                    print(f"\033[1;31m{category}/{share_name} 添加失败, 请检查是否重复添加!\033[0m")
     else:
         print("token无效, 尝试重新获取...")
         res = requests.post(login_api, headers=headers, json=conf["auth"])
